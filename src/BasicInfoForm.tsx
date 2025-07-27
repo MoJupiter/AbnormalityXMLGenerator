@@ -33,7 +33,7 @@ const BasicInfoForm = (abnormality: Abnormality, setAbnormality:React.Dispatch<R
           <br />
 
           <h3>肖像 (Portrait)</h3>
-          {RenderFileInformationArray(abnormality.basicInfo.portrait, 'basicInfo.portrait', setAbnormality)}
+          {renderInformationArray(abnormality.basicInfo.portrait, 'basicInfo.portrait', setAbnormality)}
           <br />
 
           <h3>リスクレベル (Risk Level)</h3>

@@ -32,7 +32,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "rm": "rm -rf docs",
+    "mv": "mv build docs",
+    "git": "git add . && git commit && git push origin master"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +43,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://MoJupiter.github.io/GenAbnormalityXMLs/",
+  "homepage": "https://MoJupiter.github.io/AbnormalityGenerator/",
   "browserslist": {
     "production": [
       ">0.2%",

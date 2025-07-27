@@ -53,18 +53,18 @@ export const RenderFileInformationArray = (infoArray: Information[], path: strin
   const [image, setImage] = useState<string | null>(null);
   
 
-  const onDropFile = (file: File) => {
-    if (file.type.substring(0, 5) !== "image") {
-      alert("画像ファイルでないものはアップロードできません！");
-    } else {
-      const fileReader = new FileReader();
-      fileReader.onload = () => {
-        const imageSrc: string = fileReader.result as string;
-        setImage(imageSrc);
-      };
-      fileReader.readAsDataURL(file);
-    }
-  };
+  // const onDropFile = (file: File) => {
+  //   if (file.type.substring(0, 5) !== "image") {
+  //     alert("画像ファイルでないものはアップロードできません！");
+  //   } else {
+  //     const fileReader = new FileReader();
+  //     fileReader.onload = () => {
+  //       const imageSrc: string = fileReader.result as string;
+  //       setImage(imageSrc);
+  //     };
+  //     fileReader.readAsDataURL(file);
+  //   }
+  // };
 
 
  return(<div>
@@ -83,7 +83,7 @@ export const RenderFileInformationArray = (infoArray: Information[], path: strin
         <br />
         <label>
           解放情報:
-          {image ? (
+          {/* {image ? (
             <Image
               src={image}
               width={403}
@@ -101,7 +101,7 @@ export const RenderFileInformationArray = (infoArray: Information[], path: strin
                 />
               </div>
             </DropImageZone>
-          )}
+          )} */}
         </label>
         <br />
         <button type="button" onClick={() => handleArrayRemoveItem(path, index, setAbnormality)}>
